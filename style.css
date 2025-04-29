@@ -13,7 +13,7 @@ body {
   font-family: 'Work Sans', sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  min-height: 1000px;
+  min-height: 4000px;
 }
 
 /* hero */
@@ -102,6 +102,51 @@ body {
   filter: sepia();
 }
 
+/* navbar */
+.navbar {
+  /* border: 1px solid black; */
+  position: sticky;
+  top: 0; /* penting agar sticky bekerja */
+  z-index: 1000;
+  background-color: white; /* penting agar tidak transparan saat scroll */
+  padding: 1rem;
+}
+.navbar .container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+.navbar .container i {
+  /* border: 1px solid var(--pink);
+  border-radius: 50%; */
+  margin-left: auto;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--pink);
+}
+.dropdown {
+  display: none;
+  flex-direction: column; /* pastikan arah turun */
+  position: absolute;
+  top: 3.5rem; /* jarak dari icon */
+  right: 0;
+  background-color: var(--shadow-bidang);
+  /* border: 1px solid #ccc; */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+.dropdown a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: block;
+  padding: 0.5rem 1rem;
+  color: gray;
+}
+.dropdown a:hover {
+  background-color: #f0f0f0;
+}
+
 /* media query */
 @media (max-width: 360px) {
   .hero main {
@@ -114,7 +159,7 @@ body {
     font-size: 70%;
   }
   .hero .my-countdown {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin: 0 auto;
     text-align: center;
   }
