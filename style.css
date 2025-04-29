@@ -1,0 +1,121 @@
+:root {
+  --pink: #ff90bb;
+  --pink-muda: #ffc1da;
+  --putih: #f8f8e1;
+  --biru-muda: #2baebf;
+  --pink-pudar: #ffc6c6;
+  --pink-pudar-buanget: #ffdbdb;
+  --shadow-bidang: rgba(255, 255, 255, 0.201);
+  --shadow-element: rgba(0, 0, 0, 0.798);
+}
+body {
+  font-size: 1.5rem;
+  font-family: 'Work Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  min-height: 1000px;
+}
+
+/* hero */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* Horizontal center */
+  align-items: center; /* Vertical center */
+  text-align: center; /* Center text inside */
+  /* border: 1px solid black; */
+}
+.hero main {
+  width: 90%;
+  padding: 0 1.5rem;
+  background-color: var(--shadow-bidang);
+  border-radius: 5px;
+  /* border: 1px solid black; */
+}
+.hero h4 {
+  font-family: 'Sacramento', cursive;
+  font-style: normal;
+  font-weight: bold;
+  padding-top: 1rem;
+  letter-spacing: 0.1em;
+  color: var(--biru-muda);
+  text-shadow: var(--shadow-element);
+}
+.hero h1 {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  font-style: normal;
+  padding-top: 1rem;
+  letter-spacing: 0.1em;
+  color: var(--biru-muda);
+  text-shadow: var(--shadow-element);
+}
+.hero p {
+  font-family: 'Sacramento', cursive;
+  font-weight: bold;
+  font-style: normal;
+  padding-top: 1rem;
+  letter-spacing: 0.1em;
+  color: var(--biru-muda);
+  text-shadow: var(--shadow-element);
+}
+.hero .my-countdown {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+.hero a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: var(--biru-muda);
+  box-shadow: var(--pink-pudar-buanget);
+  letter-spacing: 0.1em;
+  color: var(--biru-muda);
+  text-shadow: var(--shadow-element);
+}
+.hero a:hover {
+  color: black;
+  background-color: var(--biru-muda);
+  border-radius: 4px;
+  box-shadow: var(--shadow-element);
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.hero h4,
+.hero h1,
+.hero p,
+.hero a {
+  text-shadow: var(--shadow);
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url(image/heroImage.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  filter: sepia();
+}
+
+/* media query */
+@media (max-width: 360px) {
+  .hero main {
+    width: 90%;
+  }
+  .hero main h4,
+  .hero main h1,
+  .hero main p,
+  .hero main a {
+    font-size: 70%;
+  }
+  .hero .my-countdown {
+    border: 1px solid black;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
