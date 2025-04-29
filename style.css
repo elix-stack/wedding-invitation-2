@@ -163,4 +163,8 @@ body {
     margin: 0 auto;
     text-align: center;
   }
+
+  .dropdown a {
+    font-size: 90%rem;
+  }
 }
