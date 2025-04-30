@@ -109,7 +109,7 @@ body {
   position: sticky;
   top: 0; /* penting agar sticky bekerja */
   z-index: 1000;
-  background-color: white; /* penting agar tidak transparan saat scroll */
+  background-color: rgba(255, 255, 255, 0.159); /* penting agar tidak transparan saat scroll */
   padding: 1rem;
 }
 .navbar .container {
