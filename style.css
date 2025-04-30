@@ -147,6 +147,61 @@ body {
   background-color: #f0f0f0;
 }
 
+/* home */
+.home {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* Horizontal center */
+  align-items: center; /* Vertical center */
+  text-align: center; /* Center text inside */
+  border: 1px solid black;
+}
+.home .container {
+  width: 90%;
+  padding: 0 1.5rem;
+  background-color: var(--shadow-bidang);
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.home .container .row h1 {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  font-style: normal;
+  padding-top: 1rem;
+  letter-spacing: 0.1em;
+  color: var(--biru-muda);
+  text-shadow: var(--shadow-element);
+}
+.home .container .row h3 {
+  font-family: 'Sacramento', cursive;
+  font-style: normal;
+  font-weight: bold;
+  padding-top: 1rem;
+  letter-spacing: 0.1em;
+  color: var(--biru-muda);
+  text-shadow: var(--shadow-element);
+}
+.home .container .row p {
+  font-family: 'Sacramento', cursive;
+  font-weight: bold;
+  font-style: normal;
+  padding-top: 1rem;
+  letter-spacing: 0.1em;
+  color: var(--biru-muda);
+  text-shadow: var(--shadow-element);
+}
+.home .container .row-couple .pria h3,
+.home .container .row-couple .wanita h3 {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  font-style: normal;
+  padding-top: 1rem;
+  letter-spacing: 0.1em;
+  color: var(--biru-muda);
+  text-shadow: var(--shadow-element);
+}
+
 /* media query */
 @media (max-width: 360px) {
   .hero main {
