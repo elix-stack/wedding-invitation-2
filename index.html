@@ -6,6 +6,7 @@
     <title>Wedding Invitation 2</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css?v=2" />
+    <!-- <link rel="stylesheet" href="mediaQuery.css" /> -->
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -129,6 +130,43 @@
       });
     </script>
 
+    <!-- disable scroll -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Ambil elemen root (untuk kontrol scroll-behavior)
+        const rootElement = document.documentElement;
+
+        // Ambil tombol dengan class .hero-btn
+        const heroButton = document.querySelector('.hero-btn');
+
+        // Ambil posisi awal saat buka halaman
+        const initialScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Fungsi untuk menonaktifkan scroll
+        function disableScroll() {
+          window.scrollTo(0, 0); // Paksa posisi ke atas
+          window.onscroll = () => window.scrollTo(0, 0); // Mencegah scroll
+          rootElement.style.scrollBehavior = 'auto'; // Hindari efek smooth yang bisa lolos
+        }
+
+        // Fungsi untuk mengaktifkan scroll dan scroll ke #home
+        function enableScrollAndGoToHome() {
+          window.onscroll = null; // Izinkan scroll lagi
+          rootElement.style.scrollBehavior = 'smooth'; // Aktifkan kembali efek smooth
+          document.querySelector('#home').scrollIntoView({ behavior: 'smooth' }); // Scroll ke home
+        }
+
+        // Jalankan fungsi disable scroll saat pertama load
+        disableScroll();
+
+        // Saat tombol diklik, aktifkan scroll dan scroll ke #home
+        heroButton.addEventListener('click', function (e) {
+          e.preventDefault(); // Cegah default href behavior
+          enableScrollAndGoToHome();
+        });
+      });
+    </script>
+
     <!-- dropdown -->
     <script>
       const icon = document.querySelector('.bi-house-heart');
@@ -149,6 +187,18 @@
           dropdown.style.display = 'none';
         }
       });
+    </script>
+    <!-- js menamai undangan sesuai nama tamu -->
+    <script>
+      const urlParams = new URLSearchParams(window.location.search); //pengambilan parameter dari url yang bernilai nama tamu
+      const nama = urlParams.get('n') || '';
+      const pronoun = urlParams.get('p') || '';
+
+      // pemanggilan element yang akan diisi nama dari url
+      const namaContainer = document.querySelector('.hero h4 span');
+      namaContainer.innerText = `${pronoun} ${nama},`;
+
+      document.querySelector('#nama').value = nama;
     </script>
   </body>
 </html>

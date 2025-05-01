@@ -1,0 +1,87 @@
+/* media query */
+@media (max-width: 480px) {
+  /* hero */
+  .hero main {
+    width: 90%;
+  }
+  .hero main h4,
+  .hero main h1,
+  .hero main p,
+  .hero main a {
+    font-size: 70%;
+    letter-spacing: 0.1em;
+  }
+  .hero .my-countdown {
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* navbar */
+  .dropdown a {
+    font-size: 90%rem;
+  }
+
+  /* home */
+  .home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .home .container .row h1 {
+    font-size: 75%;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+  .home .container .row h3 {
+    font-size: 80%;
+    letter-spacing: 0.1em;
+  }
+  .home .container .row p {
+    letter-spacing: 0.1em;
+    font-size: 75%;
+  }
+  .row-couple {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  .bungkus-pria .pria,
+  .bungkus-wanita .wanita {
+    display: flex;
+    flex-direction: column; /* arah vertikal */
+    align-items: center; /* opsional: agar semua di tengah secara horizontal */
+    text-align: center; /* opsional: biar teks di tengah */
+    gap: 1rem; /* opsional: jarak antar elemen */
+  }
+  .pria p,
+  .wanita p {
+    margin-bottom: 0.01rem; /* atau sesuai kebutuhan */
+  }
+  .pria h3,
+  .wanita h3 {
+    letter-spacing: 0.1em;
+  }
+  .pria p,
+  .wanita p {
+    letter-spacing: 0.1em;
+    font-size: 75%;
+  }
+  .row-couple img {
+    max-width: 75%;
+  }
+  .pria,
+  .wanita {
+    display: flex;
+    flex-direction: column;
+  }
+  .bungkus-pria .pria {
+    order: 1;
+  }
+  .pria .latar-belakang-satu,
+  .wanita .latar-belakang-satu {
+    order: 2;
+  }
+}

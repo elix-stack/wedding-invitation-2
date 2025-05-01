@@ -25,19 +25,22 @@ body {
   justify-content: center; /* Horizontal center */
   align-items: center; /* Vertical center */
   text-align: center; /* Center text inside */
-  /* border: 1px solid black; */
+  border: 1px solid black;
+  border-radius: 3%;
 }
 .hero main {
   width: 90%;
   padding: 0 1.5rem;
   background-color: var(--shadow-bidang);
   border-radius: 5px;
-  /* border: 1px solid black; */
+  border: 1px solid black;
+  border-radius: 3%;
 }
 .hero h4 {
   font-family: 'Sacramento', cursive;
   font-style: normal;
   font-weight: bold;
+  font-size: 2rem;
   padding-top: 1rem;
   letter-spacing: 0.1em;
   color: var(--biru-muda);
@@ -54,8 +57,9 @@ body {
 }
 .hero p {
   font-family: 'Sacramento', cursive;
-  font-weight: bold;
+  font-weight: 400;
   font-style: normal;
+  font-size: 1.5rem;
   padding-top: 1rem;
   letter-spacing: 0.1em;
   color: var(--biru-muda);
@@ -95,7 +99,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  background-image: url(image/heroImage.jpeg);
+  /* background-image: url(image/heroImage.jpeg); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -109,7 +113,6 @@ body {
   position: sticky;
   top: 0; /* penting agar sticky bekerja */
   z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.159); /* penting agar tidak transparan saat scroll */
   padding: 1rem;
 }
 .navbar .container {
@@ -156,26 +159,23 @@ body {
   justify-content: center; /* Horizontal center */
   align-items: center; /* Vertical center */
   text-align: center; /* Center text inside */
-  /* border: 1px solid black; */
+  border: 1px solid black;
+  border-radius: 3%;
 }
 .home .container {
-  width: 95%;
+  width: 90%;
   padding: 0 1.5rem;
   background-color: var(--shadow-bidang);
-  border-radius: 5px;
-  /* border: 1px solid black; */
+  border-radius: 3%;
+  border: 1px solid black;
 }
 .home .container .row {
-  /* border: 1px solid black;
-  background-color: var(--pink-pudar-buanget); */
   align-items: center;
 }
 .home .container .row h1 {
-  /* border: 1px solid black; */
   font-family: 'Pacifico', cursive;
   font-weight: 400;
   font-style: normal;
-  /* padding-top: 6rem; */
   letter-spacing: 0.1em;
   color: var(--biru-muda);
   text-shadow: var(--shadow-element);
@@ -199,21 +199,35 @@ body {
   text-shadow: var(--shadow-element);
 }
 .row-couple {
-  /* border: 1px solid black; */
+  border: 1px solid black;
+  border-radius: 3%;
   display: flex;
-  justify-content: space-between; /* optional: untuk mengatur posisi ke tengah */
-  gap: 2rem; /* jarak antar pria & wanita */
-  flex-wrap: wrap; /* optional: biar tetap responsif kalau layar kecil */
+  justify-content: center; /* bisa juga space-between */
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  margin-bottom: 1rem;
   width: 100%;
-  max-width: 1200px; /* optional untuk batas maksimal */
-  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.bungkus-pria,
+.bungkus-wanita {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row; /* default, tapi tetap ditulis agar eksplisit */
+  gap: 1rem;
+  width: auto;
 }
 .row-couple img {
-  max-width: 100%;
+  width: 10rem;
   height: auto;
   border-radius: 50%;
-  /* border: 1px solid black; */
-  width: 10rem;
+  border: 5px solid var(--pink);
+  transition: transform 0.3s ease; /* animasi halus saat hover */
+}
+.row-couple img:hover {
+  transform: scale(1.1); /* membesar saat hover */
 }
 .gambar-pria,
 .gambar-wanita {
@@ -248,107 +262,7 @@ body {
   letter-spacing: 0.1em;
   color: var(--biru-muda);
   text-shadow: var(--shadow-element);
-  width: 20rem;
+  width: 26rem;
   font-size: 1.5rem;
-}
-.bungkus-pria p,
-.bungkus-pria img {
-  /* border: 1px solid black; */
-  float: right;
-}
-.bungkus-pria,
-.bungkus-wanita {
-  /* border: 1px solid black; */
-  flex: 1 1 45%; /* masing-masing ambil sekitar 45% */
-  display: flex;
-  align-items: center; /* untuk menyelaraskan vertikal */
-  gap: 2rem; /* jarak antara gambar dan info pria */
-}
-
-/* media query */
-@media (max-width: 480px) {
-  /* hero */
-  .hero main {
-    width: 90%;
-  }
-  .hero main h4,
-  .hero main h1,
-  .hero main p,
-  .hero main a {
-    font-size: 70%;
-    letter-spacing: 0.1em;
-  }
-  .hero .my-countdown {
-    /* border: 1px solid black; */
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  /* navbar */
-  .dropdown a {
-    font-size: 90%rem;
-  }
-
-  /* home */
-  .home {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .home .container .row h1 {
-    font-size: 75%;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.1em;
-  }
-  .home .container .row h3 {
-    font-size: 80%;
-    letter-spacing: 0.1em;
-  }
-  .home .container .row p {
-    letter-spacing: 0.1em;
-    font-size: 75%;
-  }
-  .row-couple {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-  }
-  .bungkus-pria .pria,
-  .bungkus-wanita .wanita {
-    display: flex;
-    flex-direction: column; /* arah vertikal */
-    align-items: center; /* opsional: agar semua di tengah secara horizontal */
-    text-align: center; /* opsional: biar teks di tengah */
-    gap: 1rem; /* opsional: jarak antar elemen */
-  }
-  .pria p,
-  .wanita p {
-    margin-bottom: 0.01rem; /* atau sesuai kebutuhan */
-  }
-  .pria h3,
-  .wanita h3 {
-    letter-spacing: 0.1em;
-  }
-  .pria p,
-  .wanita p {
-    letter-spacing: 0.1em;
-    font-size: 75%;
-  }
-  .row-couple img {
-    max-width: 75%;
-  }
-  .pria,
-  .wanita {
-    display: flex;
-    flex-direction: column;
-  }
-  .bungkus-pria .pria {
-    order: 1;
-  }
-  .pria .latar-belakang-satu,
-  .wanita .latar-belakang-satu {
-    order: 2;
-  }
+  margin: 1rem;
 }
