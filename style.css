@@ -266,7 +266,7 @@ body {
 }
 
 /* media query */
-@media (max-width: 360px) {
+@media (min-width: 360px) {
   /* hero */
   .hero main {
     width: 90%;
