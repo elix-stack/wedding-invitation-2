@@ -122,7 +122,7 @@ body {
   /* border: 1px solid var(--pink);
   border-radius: 50%; */
   margin-left: auto;
-  font-size: 2.5rem;
+  font-size: 2rem;
   cursor: pointer;
   color: var(--pink);
 }
@@ -132,7 +132,7 @@ body {
   position: absolute;
   top: 3.5rem; /* jarak dari icon */
   right: 0;
-  background-color: var(--navbar);
+  background-color: var(--putih);
   /* border: 1px solid #ccc; */
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   z-index: 999;
@@ -165,11 +165,17 @@ body {
   border-radius: 5px;
   /* border: 1px solid black; */
 }
+.home .container .row {
+  /* border: 1px solid black;
+  background-color: var(--pink-pudar-buanget); */
+  align-items: center;
+}
 .home .container .row h1 {
+  /* border: 1px solid black; */
   font-family: 'Pacifico', cursive;
   font-weight: 400;
   font-style: normal;
-  padding-top: 6rem;
+  /* padding-top: 6rem; */
   letter-spacing: 0.1em;
   color: var(--biru-muda);
   text-shadow: var(--shadow-element);
@@ -206,6 +212,8 @@ body {
   max-width: 100%;
   height: auto;
   border-radius: 50%;
+  /* border: 1px solid black; */
+  width: 10rem;
 }
 .gambar-pria,
 .gambar-wanita {
@@ -215,11 +223,6 @@ body {
   align-items: center; /* horizontal center */
   justify-content: center; /* optional: vertical center jika punya tinggi tertentu */
   text-align: center; /* agar teks di dalam <h3> juga rata tengah */
-  width: 10rem;
-}
-.gambar-pria img,
-.gambar-wanita img {
-  /* border: 1px solid black; */
   width: 10rem;
 }
 .gambar-pria h3,
@@ -248,6 +251,11 @@ body {
   width: 20rem;
   font-size: 1.5rem;
 }
+.bungkus-pria p,
+.bungkus-pria img {
+  /* border: 1px solid black; */
+  float: right;
+}
 .bungkus-pria,
 .bungkus-wanita {
   /* border: 1px solid black; */
@@ -259,6 +267,7 @@ body {
 
 /* media query */
 @media (max-width: 360px) {
+  /* hero */
   .hero main {
     width: 90%;
   }
@@ -267,6 +276,7 @@ body {
   .hero main p,
   .hero main a {
     font-size: 70%;
+    letter-spacing: 0.1em;
   }
   .hero .my-countdown {
     /* border: 1px solid black; */
@@ -274,7 +284,71 @@ body {
     text-align: center;
   }
 
+  /* navbar */
   .dropdown a {
     font-size: 90%rem;
+  }
+
+  /* home */
+  .home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .home .container .row h1 {
+    font-size: 75%;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+  .home .container .row h3 {
+    font-size: 80%;
+    letter-spacing: 0.1em;
+  }
+  .home .container .row p {
+    letter-spacing: 0.1em;
+    font-size: 75%;
+  }
+  .row-couple {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  .bungkus-pria,
+  .bungkus-wanita {
+    display: flex;
+    flex-direction: column; /* arah vertikal */
+    align-items: center; /* opsional: agar semua di tengah secara horizontal */
+    text-align: center; /* opsional: biar teks di tengah */
+    gap: 1rem; /* opsional: jarak antar elemen */
+  }
+  .pria p,
+  .wanita p {
+    margin-bottom: 0.01rem; /* atau sesuai kebutuhan */
+  }
+  .pria h3,
+  .wanita h3 {
+    letter-spacing: 0.1em;
+  }
+  .pria p,
+  .wanita p {
+    letter-spacing: 0.1em;
+    font-size: 75%;
+  }
+  .row-couple img {
+    max-width: 75%;
+  }
+  .pria,
+  .wanita {
+    display: flex;
+    flex-direction: column;
+  }
+  .bungkus-pria .pria {
+    order: 1;
+  }
+  .pria .latar-belakang-satu,
+  .wanita .latar-belakang-satu {
+    order: 2;
   }
 }
