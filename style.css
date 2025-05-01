@@ -315,8 +315,8 @@ body {
     align-items: center;
     margin-top: 2rem;
   }
-  .bungkus-pria,
-  .bungkus-wanita {
+  .bungkus-pria .pria,
+  .bungkus-wanita .wanita {
     display: flex;
     flex-direction: column; /* arah vertikal */
     align-items: center; /* opsional: agar semua di tengah secara horizontal */
