@@ -1,23 +1,35 @@
 :root {
-  --pink: #ff90bb;
-  --pink-muda: #ffc1da;
-  --putih: #f8f8e1;
-  --biru-muda: #2baebf;
-  --pink-pudar: #ffc6c6;
-  --pink-pudar-buanget: #ffdbdb;
-  --shadow-bidang: rgba(255, 255, 255, 0.201);
-  --shadow-element: rgba(0, 0, 0, 0.798);
-  --navbar: #ffdbdb79;
+  --red: rgb(252, 59, 59);
+  --pink: #f14e95;
+  --yellow: rgb(205, 205, 49);
+  --green: green;
+  --blue: rgb(0, 123, 255);
+  --gold: gold;
+  --bg: #0a0a0a;
+  --shadow: 0 2px 2px rgb(0, 0, 0);
+  --transparant: rgba(0, 0, 0, 0.319);
 }
 body {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-family: 'Work Sans', sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
   min-height: 4000px;
 }
 
 /* hero */
+/* .hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(image/florapattern3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  filter: grayscale();
+} */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -43,7 +55,7 @@ body {
   font-size: 2rem;
   padding-top: 1rem;
   letter-spacing: 0.1em;
-  color: var(--biru-muda);
+  color: var(--gold);
   text-shadow: var(--shadow-element);
 }
 .hero h1 {
@@ -52,17 +64,17 @@ body {
   font-style: normal;
   padding-top: 1rem;
   letter-spacing: 0.1em;
-  color: var(--biru-muda);
+  color: var(--gold);
   text-shadow: var(--shadow-element);
 }
 .hero p {
   font-family: 'Sacramento', cursive;
-  font-weight: 400;
+  font-weight: bold;
   font-style: normal;
   font-size: 1.5rem;
   padding-top: 1rem;
   letter-spacing: 0.1em;
-  color: var(--biru-muda);
+  color: var(--gold);
   text-shadow: var(--shadow-element);
 }
 .hero .my-countdown {
@@ -75,7 +87,7 @@ body {
   color: var(--biru-muda);
   box-shadow: var(--pink-pudar-buanget);
   letter-spacing: 0.1em;
-  color: var(--biru-muda);
+  color: var(--gold);
   text-shadow: var(--shadow-element);
 }
 .hero a:hover {
@@ -153,116 +165,207 @@ body {
 
 /* home */
 .home {
-  position: relative;
+  /* background-image: url(image/florapattern2.png);
+  background-size: cover; */
   min-height: 100vh;
-  display: flex;
-  justify-content: center; /* Horizontal center */
-  align-items: center; /* Vertical center */
-  text-align: center; /* Center text inside */
-  border: 1px solid black;
-  border-radius: 3%;
+  margin-top: -5rem;
+  padding-top: 15rem;
+  padding-bottom: 5rem;
 }
-.home .container {
-  width: 90%;
-  padding: 0 1.5rem;
-  background-color: var(--shadow-bidang);
-  border-radius: 3%;
-  border: 1px solid black;
-}
-.home .container .row {
-  align-items: center;
-}
-.home .container .row h1 {
-  font-family: 'Pacifico', cursive;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: 0.1em;
-  color: var(--biru-muda);
-  text-shadow: var(--shadow-element);
-}
-.home .container .row h3 {
-  font-family: 'Sacramento', cursive;
-  font-style: normal;
+
+.home h2,
+.info h2,
+.story h2,
+.gallery h2,
+.rsvp h2,
+.gifts h2 {
+  color: var(--pink);
+  font-family: 'Sacramento';
+  font-size: 5rem;
   font-weight: bold;
-  padding-top: 1rem;
-  letter-spacing: 0.1em;
-  color: var(--biru-muda);
-  text-shadow: var(--shadow-element);
 }
-.home .container .row p {
-  font-family: 'Sacramento', cursive;
-  font-weight: 400;
-  font-style: normal;
-  padding-top: 1rem;
-  letter-spacing: 0.1em;
-  color: var(--biru-muda);
-  text-shadow: var(--shadow-element);
+.home h2 {
+  margin-top: -6rem;
 }
-.row-couple {
-  border: 1px solid black;
-  border-radius: 3%;
-  display: flex;
-  justify-content: center; /* bisa juga space-between */
-  align-items: center;
-  gap: 2rem;
-  padding: 2rem 1rem;
-  margin-bottom: 1rem;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-}
-.bungkus-pria,
-.bungkus-wanita {
-  border: 1px solid black;
-  display: flex;
-  flex-direction: row; /* default, tapi tetap ditulis agar eksplisit */
-  gap: 1rem;
-  width: auto;
-}
-.row-couple img {
-  width: 10rem;
-  height: auto;
-  border-radius: 50%;
-  border: 5px solid var(--pink);
-  transition: transform 0.3s ease; /* animasi halus saat hover */
-}
-.row-couple img:hover {
-  transform: scale(1.1); /* membesar saat hover */
-}
-.gambar-pria,
-.gambar-wanita {
-  /* border: 1px solid black; */
-  display: flex;
-  flex-direction: column; /* tumpuk vertikal: img di atas, h3 di bawah */
-  align-items: center; /* horizontal center */
-  justify-content: center; /* optional: vertical center jika punya tinggi tertentu */
-  text-align: center; /* agar teks di dalam <h3> juga rata tengah */
-  width: 10rem;
-}
-.gambar-pria h3,
-.gambar-wanita h3 {
-  /* border: 1px solid black; */
-  font-family: 'Pacifico', cursive;
-  font-weight: 400;
-  font-style: normal;
-  padding-top: 1rem;
-  letter-spacing: 0.1em;
-  color: var(--biru-muda);
-  text-shadow: var(--shadow-element);
-  width: 15rem;
-  justify-content: center;
-  font-size: 0.8rem;
-}
-.row-couple p {
-  /* border: 1px solid black; */
-  font-family: 'Sacramento', cursive;
-  font-weight: 400;
-  font-style: normal;
-  padding-top: 1rem;
-  letter-spacing: 0.1em;
-  color: var(--biru-muda);
-  text-shadow: var(--shadow-element);
-  width: 26rem;
+.home h3 {
+  color: #444;
   font-size: 1.5rem;
-  margin: 1rem;
+  margin-bottom: 1rem;
+}
+.home p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.home .couple {
+  margin-top: 75px;
+}
+.home .couple h3 {
+  font-family: 'Sacramento';
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--pink);
+}
+.home .couple img {
+  width: 100%;
+}
+.home .heart {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(65px);
+}
+.home .heart i {
+  margin: auto;
+  color: var(--pink);
+}
+
+/* information */
+.info {
+  /* background-color: var(--shadow); */
+  color: azure;
+  padding-top: 10rem;
+  padding-bottom: 8rem;
+}
+.info .alamat {
+  font-size: 1.1rem;
+}
+.info .description {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.info .card {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: var(--bg) !important;
+  border: 1px solid #999;
+}
+.info .card-header {
+  border-bottom: 1px solid #999;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+.info .card-body {
+  font-size: 1rem;
+}
+.info .card-footer {
+  border-top: 1px solid #999;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+/* story */
+.story,
+.gallery,
+.rsvp,
+.gifts {
+  padding-top: 10rem;
+  padding-bottom: 8rem;
+}
+.story span,
+.gallery span,
+.gifts span {
+  text-transform: uppercase;
+  color: #666;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 1rem;
+}
+.story p,
+.gallery p,
+.rsvp p,
+.gifts p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.timeline {
+  list-style: none;
+  padding: 1.4rem 0;
+  margin-top: 1rem;
+  position: relative;
+}
+.timeline::before {
+  content: '';
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  width: 1px;
+  background-color: #a4a2a2;
+  left: 50%;
+}
+.timeline li {
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.timeline::before,
+.timeline::after {
+  content: '';
+  display: table;
+}
+.timeline::after {
+  clear: both;
+}
+.timeline li .timeline-image {
+  width: 160px;
+  height: 160px;
+  background-color: #ccc;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.timeline li .timeline-panel {
+  width: 40%;
+  float: left;
+  border: 1px solid #ccc;
+  padding: 2rem;
+  position: relative;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.timeline li .timeline-panel::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  border-top: 15px solid transparent; /* trik membuat panel segitiga */
+  border-left: 15px solid#ccc; /* trik membuat panel segitiga */
+  border-right: 0 solid#ccc; /* trik membuat panel segitiga */
+  border-bottom: 15px solid transparent; /* trik membuat panel segitiga */
+  top: 80px; /* trik membuat panel segitiga */
+  right: -15px; /* trik membuat panel segitiga */
+}
+.timeline li .timeline-panel::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  border-top: 14px solid transparent; /* trik membuat panel segitiga */
+  border-left: 14px solid#fff; /* trik membuat panel segitiga */
+  border-right: 0 solid#fff; /* trik membuat panel segitiga */
+  border-bottom: 14px solid transparent; /* trik membuat panel segitiga */
+  top: 81px; /* trik membuat panel segitiga */
+  right: -13px; /* trik membuat panel segitiga */
+}
+.timeline li.timeline-inverted .timeline-panel {
+  float: right; /* memindahkan panel ke kanan */
+}
+.timeline li.timeline-inverted .timeline-panel::before {
+  border-left-width: 0; /* membalikkan posisi segitiga */
+  border-right-width: 15px; /* membalikkan posisi segitiga */
+  left: -15px; /* membalikkan posisi segitiga */
+  right: auto; /* membalikkan posisi segitiga */
+}
+.timeline li.timeline-inverted .timeline-panel::after {
+  border-left-width: 0; /* membalikkan posisi segitiga */
+  border-right-width: 14px; /* membalikkan posisi segitiga */
+  left: -13px; /* membalikkan posisi segitiga */
+  right: auto; /* membalikkan posisi segitiga */
 }
